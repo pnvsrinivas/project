@@ -12,6 +12,6 @@ router.register(r'users', UserViewSet)
 
 urlpatterns = [
     # url(r'^$', index),
-    path('', include(router.urls)),
+    path('api/', include(router.urls)),
     url(r'^$', RedirectView.as_view(url='/api/auth/login/')),
 ]
